@@ -1,0 +1,25 @@
+body {
+    background-color: rgb(182, 200, 83);
+    font-family: Arial, sans-serif;
+}
+
+.section {
+    background-color: rgb(87, 28, 59);
+    color: rgb(255, 255, 255);
+    border: 2px solid rgb(255, 255, 255);
+    padding: 10px;
+    margin: 10px;
+    display: inline-block;
+}
+
+.section input[type="text"] {
+    margin-right: 10px;
+}
+
+.section button {
+    background-color: rgb(255, 255, 255);
+    color: rgb(87, 28, 59);
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}

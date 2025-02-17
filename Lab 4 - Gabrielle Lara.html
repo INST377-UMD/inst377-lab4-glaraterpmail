@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INST377 - Lab 4</title>
+    <link rel="stylesheet" href="Lab 4 - Gabrielle Lara.css">
+</head>
+<body>
+    <h1>INST377 - Lab 4</h1>
+    <div class="section">
+        <form id="alertForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <button type="button" onclick="alertName()">Alert Me!</button>
+        </form>
+    </div>
+    <div class="section">
+        <button onclick="changeColor()">Change Color</button>
+    </div>
+    <div class="section">
+        <form id="textForm">
+            <label for="textTester">Text Tester:</label>
+            <input type="text" id="textTester" name="textTester">
+            <button type="button" onclick="validateText()">Validate Text</button>
+        </form>
+    </div>
+    <div class="section">
+        <button onclick="addText()">Add Text</button>
+    </div>
+
+    <script>
+        function alertName() {
+            var name = document.getElementById('name').value;
+            alert('Hello ' + name + '!');
+        }
+
+        function changeColor() {
+            var body = document.body;
+            if (body.style.backgroundColor === 'rgb(173, 216, 230)') {
+                body.style.backgroundColor = 'rgb(144, 238, 144)';
+            } else {
+                body.style.backgroundColor = 'rgb(173, 216, 230)';
+            }
+        }
+
+        function validateText() {
+            var text = document.getElementById('textTester').value;
+            var validation = /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]+/;
+            if (validation.test(text)) {
+                alert('Text contains special characters, please try again!');
+            } else {
+                alert('Text is valid!');
+            }
+        }
+
+        function addText() {
+            var heading = document.querySelector('h1');
+            heading.textContent += '...Add Text';
+        }
+    </script>
+</body>
+</html>
